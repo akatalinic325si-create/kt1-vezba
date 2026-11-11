@@ -7,6 +7,7 @@ public class ActionManager {
     private final NewDocumentAction newDocumentAction = new NewDocumentAction();
     private final NewCodeDocumentAction newCodeDocumentAction = new NewCodeDocumentAction();
     private final NewFolderAction newFolderAction = new NewFolderAction();
+    private final DuplicateDocumentAction duplicateDocumentAction = new DuplicateDocumentAction();
     private final ExitAction exitAction = new ExitAction();
 
     private ActionManager() {
@@ -22,6 +23,10 @@ public class ActionManager {
 
     public NewCodeDocumentAction getNewCodeDocumentAction() {
         return newCodeDocumentAction;
+    }
+
+    public DuplicateDocumentAction getDuplicateDocumentAction() {
+        return duplicateDocumentAction;
     }
 
     public NewFolderAction getNewFolderAction() {

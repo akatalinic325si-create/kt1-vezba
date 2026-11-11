@@ -8,6 +8,7 @@ public class MainToolbar extends JToolBar {
     public MainToolbar(
             Action newDocumentAction,
             Action newCodeDocumentAction,
+            Action duplicateDocumentAction,
             Action newFolderAction,
             Action exitAction) {
 
@@ -15,7 +16,9 @@ public class MainToolbar extends JToolBar {
 
         add(newDocumentAction);
         add(newCodeDocumentAction);
+        add(duplicateDocumentAction);
         add(newFolderAction);
+
 
         addSeparator();
 

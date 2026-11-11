@@ -75,6 +75,7 @@ public class MainFrame extends JFrame {
     public void postaviAkcije(
             Action newDocumentAction,
             Action newCodeDocumentAction,
+            Action duplicateDocumentAction,
             Action newFolderAction,
             Action exitAction) {
 
@@ -85,6 +86,7 @@ public class MainFrame extends JFrame {
 
         fileMenu.add(newDocumentAction);
         fileMenu.add(newCodeDocumentAction);
+        fileMenu.add(duplicateDocumentAction);
         fileMenu.add(newFolderAction);
 
         fileMenu.addSeparator();
@@ -100,6 +102,7 @@ public class MainFrame extends JFrame {
         mainToolbar = new MainToolbar(
                 newDocumentAction,
                 newCodeDocumentAction,
+                duplicateDocumentAction,
                 newFolderAction,
                 exitAction
         );
