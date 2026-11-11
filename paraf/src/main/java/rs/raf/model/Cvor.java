@@ -6,7 +6,7 @@ import java.beans.PropertyChangeSupport;
 import java.util.Collections;
 import java.util.List;
 
-public abstract class Cvor {
+public abstract class Cvor implements Comparable<Cvor>{
 
     private final String ime;
     private Cvor roditelj;
@@ -71,5 +71,10 @@ public abstract class Cvor {
     @Override
     public String toString() {
         return ime;
+    }
+
+    @Override
+    public int compareTo(Cvor o) {
+        return this.getIme().compareTo(o.getIme());
     }
 }

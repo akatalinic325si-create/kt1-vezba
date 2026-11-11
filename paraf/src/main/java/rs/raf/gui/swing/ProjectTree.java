@@ -36,8 +36,12 @@ public class ProjectTree extends JTree
     private static DefaultMutableTreeNode napraviCvor(Cvor cvor) {
         DefaultMutableTreeNode prikaz =
                 new DefaultMutableTreeNode(cvor);
-
+        List<Cvor> sortiranaDeca = new ArrayList<>();
         for (Cvor dete : cvor.getDeca()) {
+            sortiranaDeca.add(dete);
+        }
+        sortiranaDeca.sort(null);
+        for (Cvor dete : sortiranaDeca) {
             prikaz.add(napraviCvor(dete));
         }
 
