@@ -64,4 +64,17 @@ public class Fascikla extends Cvor {
             obavestiPromenu(PROMENA_DECE, dete, null);
         }
     }
+
+    public int brojDokumenata(){
+        int brojac = 0;
+        for(Cvor dete: getDeca()){
+            if(dete instanceof Fascikla fascikla){
+                brojac+=fascikla.brojDokumenata();
+            }
+            else{
+                brojac++;
+            }
+        }
+        return brojac;
+    }
 }
