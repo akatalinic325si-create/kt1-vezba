@@ -3,10 +3,9 @@ package rs.raf.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-public class Fascikla extends Cvor implements Comparable<Cvor> {
+public class Fascikla extends Cvor {
 
     private final List<Cvor> deca;
     private static int brojacFascikli = 0;
@@ -23,7 +22,6 @@ public class Fascikla extends Cvor implements Comparable<Cvor> {
 
     @Override
     public List<Cvor> getDeca () {
-        deca.sort(null);
         return Collections.unmodifiableList(deca);
     }
 
@@ -66,10 +64,5 @@ public class Fascikla extends Cvor implements Comparable<Cvor> {
             dete.setRoditelj(null);
             obavestiPromenu(PROMENA_DECE, dete, null);
         }
-    }
-
-    @Override
-    public int compareTo(Cvor o) {
-        return o.getIme().compareTo(o.getIme());
     }
 }

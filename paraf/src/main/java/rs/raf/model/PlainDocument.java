@@ -9,6 +9,11 @@ public class PlainDocument extends Document {
         super(Document.novoImeObicnogDokumenta());
     }
 
+    public PlainDocument getDuplikat() {
+        PlainDocument novi = new PlainDocument(this.getIme());
+        novi.setTekst(this.getTekst());
+        return novi;
+    }
     @Override
     public boolean koristiMonospaceFont() {
         return false;

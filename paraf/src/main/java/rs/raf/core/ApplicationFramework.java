@@ -41,6 +41,7 @@ public class ApplicationFramework {
             prozor.postaviAkcije(
                     akcije.getNewDocumentAction(),
                     akcije.getNewCodeDocumentAction(),
+                    akcije.getDuplicateDocumentAction(),
                     akcije.getNewFolderAction(),
                     akcije.getExitAction()
             );

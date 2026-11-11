@@ -21,6 +21,8 @@ public abstract class Document extends Cvor {
         this.tekst = "";
     }
 
+    public abstract Document getDuplikat();
+
     public String getTekst() {
         return tekst;
     }
